@@ -24,15 +24,15 @@ ReactDOM.render(
       <Route path="/" element={<LoginType />} />
       <Route path="/home" element={<Home />} />
 
+      <Route path="/find-children" element={<FindChildren />} />
       <Route path="/driver-contact" element={<DriverContact />} />
       <Route path="/drivers-list" element={<DriversList />} />
-      <Route path="/find-children" element={<FindChildren />} />
       <Route path="/parents-profile" element={<ParentsProfile />} />
 
-      <Route path="/car-routes" element={<CarRoutes />} />
       <Route path="/checkin" element={<Checkin />} />
-      <Route path="/manage-children" element={<Children />} />
+      <Route path="/car-routes" element={<CarRoutes />} />
       <Route path="/parents-contact" element={<ParentsContact />} />
+      <Route path="/manage-children" element={<Children />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
