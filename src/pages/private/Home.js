@@ -1,35 +1,69 @@
 import React, { Fragment } from 'react'
 import { Link } from "react-router-dom";
+import Auth from '../../Auth';
+
+const MenuOption = ({ item }) => {
+	return (
+		<figure>
+			<Link to={item.link}>{item.title}</Link>
+		</figure>
+	)
+}
 
 export default () => {
+	const user = Auth.getUserInfo()
+	const driverOptions = [
+		{
+			title: 'Checkin da Pirua',
+			icon: 'lapis',
+			link: '/checkin',
+		},
+		{
+			title: 'Rotas Indicadas',
+			icon: 'mapa',
+			link: '/car-routes',
+		},
+		{
+			title: 'Entrar em contato com Responsável',
+			icon: 'pessoa',
+			link: '/parents-contact',
+		},
+		{
+			title: 'Gerenciar Crianças',
+			icon: 'engrenagem',
+			link: '/manage-children',
+		},
+	]
+	const parentOptions = [
+		{
+			title: 'Localizar filho(a)',
+			icon: 'mapa',
+			link: '/find-children',
+		},
+		{
+			title: 'Entrar em contato com Perueiro',
+			icon: 'motorista',
+			link: '/driver-contact',
+		},
+		{
+			title: 'Lista de Perueiros',
+			icon: 'perua',
+			link: '/drivers-list',
+		},
+		{
+			title: 'Informações do contrato',
+			icon: 'lapis',
+			link: '/parents-profile',
+		},
+	]
+
+	const renderOptions = options => {
+		return options.map(option => <MenuOption item={option} />)
+	}
+
 	return (
 		<Fragment>
-			<h2>Motorista:</h2>
-			<p>
-				<Link to='/checkin'>Checkin</Link>
-			</p>
-			<p>
-				<Link to='/car-routes'>Rotas</Link>
-			</p>
-			<p>
-				<Link to='/parents-contact'>Contato responsável</Link>
-			</p>
-			<p>
-				<Link to='/manage-children'>Gerenciar crianças</Link>
-			</p>
-			<h2>Responsável:</h2>
-			<p>
-				<Link to='/find-children'>Localizar</Link>
-			</p>
-			<p>
-				<Link to='/driver-contact'>Contato Perueiro</Link>
-			</p>
-			<p>
-				<Link to='/drivers-list'>Lista de perueiros</Link>
-			</p>
-			<p>
-				<Link to='/parents-profile'>Informações</Link>
-			</p>
+			{renderOptions(user ? parentOptions : driverOptions)}
 		</Fragment>
 	)
 }

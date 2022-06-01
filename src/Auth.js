@@ -1,6 +1,7 @@
 class Auth {
 	constructor() {
 		this.isAuthenticated = false
+		this.userType = undefined
 	}
 
 	login() {
@@ -13,6 +14,10 @@ class Auth {
 
 	getAuth() {
 		return this.isAuthenticated
+	}
+
+	getUserInfo(){
+		return this.userType
 	}
 }
 
