@@ -2,8 +2,7 @@ import clearObject from "./functions/clearObject"
 
 class Auth {
 	constructor() {
-		this.isAuthenticated = false
-		this.currUser = {}
+		this.currUser = undefined
 	}
 
 	login(type) {
@@ -16,17 +15,15 @@ class Auth {
 		}
 		this.currUser = currUser
 		localStorage.setItem('currUser', JSON.stringify(currUser))
-		this.isAuthenticated = true
 	}
 
 	logout() {
-		this.currUser = {}
+		this.currUser = undefined
 		localStorage.removeItem('currUser')
-		this.isAuthenticated = false
 	}
 
 	getAuth() {
-		return this.isAuthenticated
+		return this.currUser !== undefined
 	}
 
 	getUserType() {
@@ -35,7 +32,7 @@ class Auth {
 			this.currUser = JSON.parse(storagedUser)
 			return this.currUser.userType
 		}
-		this.currUser = {}
+		this.currUser = undefined
 		return undefined
 	}
 }
