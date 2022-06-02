@@ -12,7 +12,7 @@ const MenuOption = ({ item }) => {
 }
 
 export default () => {
-	const user = Auth.getUserInfo()
+	const user = Auth.getUserType()
 	const menuOptions = {
 		driver: [
 			{
@@ -64,7 +64,7 @@ export default () => {
 		return options.map(option => <MenuOption key={newId()} item={option} />)
 	}
 
-	console.log("🚀 ~ file: Home.js ~ line 68 ~ user", user)
+	console.log("🚀 ~ file: Home.js ~ line 70 ~ user", user)
 	return (
 		<Fragment>
 			{renderOptions(menuOptions[user])}

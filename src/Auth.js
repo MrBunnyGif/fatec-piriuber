@@ -1,15 +1,27 @@
+import clearObject from "./functions/clearObject"
+
 class Auth {
 	constructor() {
 		this.isAuthenticated = false
-		this.userType = undefined
+		this.currUser = {}
 	}
 
 	login(type) {
-		this.userType = type
+		const currUser = {
+			userType: type,
+			name: 'Nome',
+			children: 'Criança',
+			prefix: 'prefix',
+			cpf: 'cpf',
+		}
+		this.currUser = currUser
+		localStorage.setItem('currUser', JSON.stringify(currUser))
 		this.isAuthenticated = true
 	}
 
 	logout() {
+		this.currUser = {}
+		localStorage.removeItem('currUser')
 		this.isAuthenticated = false
 	}
 
@@ -17,8 +29,14 @@ class Auth {
 		return this.isAuthenticated
 	}
 
-	getUserInfo() {
-		return this.userType
+	getUserType() {
+		const storagedUser = localStorage.getItem('currUser')
+		if (storagedUser) {
+			this.currUser = JSON.parse(storagedUser)
+			return this.currUser.userType
+		}
+		this.currUser = {}
+		return undefined
 	}
 }
 
