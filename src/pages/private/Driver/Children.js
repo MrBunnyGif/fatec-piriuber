@@ -56,6 +56,16 @@ export default () => {
 		setChildrenList(filtered)
 	}
 
+	const addChild = () => {
+		const newChild = {
+			id: newId(),
+			name: 'Nome aqui',
+			endereco: 'Endereço Rua Avenida Numero 000',
+		}
+
+		setChildrenList([...childrenList, newChild])
+	}
+
 	const renderChildrenList = drivers => {
 		return drivers.map(c => <CheckinItem deleteFunc={deleteFunc} item={c} />)
 	}
@@ -65,6 +75,7 @@ export default () => {
 			<PreviousButton />
 			<h1>Children</h1>
 			{renderChildrenList(childrenList)}
+			<button onClick={()=>addChild()}>Adicionar</button>
 		</Fragment>
 	)
 }
