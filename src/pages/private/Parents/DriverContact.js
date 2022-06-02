@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import PreviousButton from '../../../components/PreviousButton'
-import image from '../../../assets/images/image1.jpeg'
+import image from '../../../assets/images/image4.jpeg'
 
 export default () => {
 	return (
