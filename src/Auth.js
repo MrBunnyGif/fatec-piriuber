@@ -23,6 +23,9 @@ class Auth {
 	}
 
 	getAuth() {
+		const storagedUser = localStorage.getItem('currUser')
+		if(storagedUser)
+			this.currUser = JSON.parse(storagedUser)
 		return this.currUser !== undefined
 	}
 

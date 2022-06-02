@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import LoginType from './pages/public/Logintype'
 import DriverContact from './pages/private/Parents/DriverContact'
@@ -12,24 +12,27 @@ import ParentsContact from './pages/private/Driver/ParentsContact'
 import Home from './pages/private/Home'
 import {
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
+import Auth from './Auth';
+import ProtectedRoute from './components/ProtectedRoute';
+
 class App extends Component {
   render() {
     return (
       <Routes>
         <Route path="/" element={<LoginType />} />
-        <Route path="/home" element={<Home />} />
 
-        <Route path="/find-children" element={<FindChildren />} />
-        <Route path="/driver-contact" element={<DriverContact />} />
-        <Route path="/drivers-list" element={<DriversList />} />
-        <Route path="/parents-profile" element={<ParentsProfile />} />
+        <Route path='/home' element={<ProtectedRoute component={<Home />} />} />
+        <Route path="/find-children" element={<ProtectedRoute component={<FindChildren />} />} />
+        <Route path="/driver-contact" element={<ProtectedRoute component={<DriverContact />} />} />
+        <Route path="/drivers-list" element={<ProtectedRoute component={<DriversList />} />} />
+        <Route path="/parents-profile" element={<ProtectedRoute component={<ParentsProfile />} />} />
 
-        <Route path="/checkin" element={<Checkin />} />
-        <Route path="/car-routes" element={<CarRoutes />} />
-        <Route path="/parents-contact" element={<ParentsContact />} />
-        <Route path="/manage-children" element={<Children />} />
+        <Route path="/checkin" element={<ProtectedRoute component={<Checkin />} />} />
+        <Route path="/car-routes" element={<ProtectedRoute component={<CarRoutes />} />} />
+        <Route path="/parents-contact" element={<ProtectedRoute component={<ParentsContact />} />} />
+        <Route path="/manage-children" element={<ProtectedRoute component={<Children />} />} />
       </Routes>
     );
   }
