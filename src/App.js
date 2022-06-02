@@ -1,5 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import './App.css';
+import React, { Component } from 'react';
 import LoginType from './pages/public/Logintype'
 import DriverContact from './pages/private/Parents/DriverContact'
 import DriversList from './pages/private/Parents/DriversList'
@@ -14,7 +13,6 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import Auth from './Auth';
 import ProtectedRoute from './components/ProtectedRoute';
 
 class App extends Component {
