@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Link, Navigate } from "react-router-dom";
 import Auth from '../../Auth';
 import newId from '../../functions/newId';
+import { useNavigate } from 'react-router-dom';
 
 const MenuOption = ({ item }) => {
 	return (
@@ -12,6 +13,7 @@ const MenuOption = ({ item }) => {
 }
 
 export default () => {
+	const navigate = useNavigate()
 	const user = Auth.getUserType()
 	const menuOptions = {
 		driver: [
@@ -64,9 +66,15 @@ export default () => {
 		return options.map(option => <MenuOption key={newId()} item={option} />)
 	}
 
+	const handleLogout = () => {
+		Auth.logout()
+		navigate('/')
+	}
+
 	return (
 		<Fragment>
 			{renderOptions(menuOptions[user])}
+			<button onClick={() => handleLogout()}>Logout</button>
 		</Fragment>
 	)
 }
