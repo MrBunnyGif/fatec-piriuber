@@ -19,7 +19,9 @@ const CheckinItem = ({ item, checkChild }) => {
 }
 
 const SaveButton = () => {
-
+	return (
+		<button onClick={() => alert('Lista salva!')}>salvar</button>
+	)
 }
 
 export default () => {
@@ -82,6 +84,7 @@ export default () => {
 			<PreviousButton />
 			<h1>Checkin</h1>
 			{renderChildrenList(childrenList)}
+			<SaveButton />
 		</Fragment>
 	)
 }
