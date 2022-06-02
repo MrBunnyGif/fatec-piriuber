@@ -64,6 +64,15 @@ export default () => {
 		}
 	])
 
+	const renderDate = () => {
+		var data = new Date();
+		var dia = String(data.getDate()).padStart(2, '0');
+		var mes = String(data.getMonth() + 1).padStart(2, '0');
+		var ano = data.getFullYear();
+		return dia + '/' + mes + '/' + ano;
+	}
+	renderDate()
+
 	const checkChild = (id, value) => {
 		let listModified = [...childrenList]
 		listModified = listModified.map(currChild => {
@@ -83,6 +92,7 @@ export default () => {
 		<Fragment>
 			<PreviousButton />
 			<h1>Checkin</h1>
+			{renderDate()}
 			{renderChildrenList(childrenList)}
 			<SaveButton />
 		</Fragment>
