@@ -1,15 +1,23 @@
 import React, { Fragment } from 'react'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Auth from '../../Auth';
 
 export default () => {
+	const navigate = useNavigate()
+
+	const logIn = type => {
+		Auth.login(type)
+		navigate('/home')
+	}
+
 	return (
 		<Fragment>
-			<p>
-				<Link to='/home'>Motorista</Link>
-			</p>
-			<p>
-				<Link to='/home'>Responsável</Link>
-			</p>
+			<button onClick={() => logIn('driver')}>
+				Motorista
+			</button>
+			<button onClick={() => logIn('parent')}>
+				Responsável
+			</button>
 		</Fragment>
 	)
 }

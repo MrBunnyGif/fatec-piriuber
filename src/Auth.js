@@ -4,7 +4,8 @@ class Auth {
 		this.userType = undefined
 	}
 
-	login() {
+	login(type) {
+		this.userType = type
 		this.isAuthenticated = true
 	}
 
@@ -16,7 +17,7 @@ class Auth {
 		return this.isAuthenticated
 	}
 
-	getUserInfo(){
+	getUserInfo() {
 		return this.userType
 	}
 }
