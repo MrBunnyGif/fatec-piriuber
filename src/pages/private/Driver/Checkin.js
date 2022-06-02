@@ -1,6 +1,12 @@
 import React, { Fragment, useState } from 'react'
 import PreviousButton from '../../../components/PreviousButton'
 import newId from '../../../functions/newId'
+import image1 from '../../../assets/images/image1.jpeg'
+import image2 from '../../../assets/images/image2.jpeg'
+import image3 from '../../../assets/images/image3.jpeg'
+import image4 from '../../../assets/images/image4.jpeg'
+import image5 from '../../../assets/images/image5.jpeg'
+import image6 from '../../../assets/images/image6.jpeg'
 
 const CheckinItem = ({ item, checkChild }) => {
 	return (
@@ -12,41 +18,45 @@ const CheckinItem = ({ item, checkChild }) => {
 	)
 }
 
+const SaveButton = () => {
+
+}
+
 export default () => {
 	const [childrenList, setChildrenList] = useState([
 		{
 			id: newId(),
-			img: 'https://this-person-does-not-exist.com/img/avatar-803a33ec6b8b060c3acb95ed1604b64f.jpg',
+			img: image1,
 			name: 'Olivia',
 			isChecked: false
 		},
 		{
 			id: newId(),
-			img: 'https://this-person-does-not-exist.com/img/avatar-5937a06971cf66a9b2d242b3a4417c7e.jpg',
+			img: image2,
 			name: 'Lúcia',
 			isChecked: false
 		},
 		{
 			id: newId(),
-			img: 'https://this-person-does-not-exist.com/img/avatar-e9528e4af6eb67fef293bb4bed714b2d.jpg',
+			img: image3,
 			name: 'Carlos',
 			isChecked: false
 		},
 		{
 			id: newId(),
-			img: 'https://this-person-does-not-exist.com/img/avatar-639563554ff70b04814920715c539873.jpg',
+			img: image4,
 			name: 'Luciana',
 			isChecked: true
 		},
 		{
 			id: newId(),
-			img: 'https://this-person-does-not-exist.com/img/avatar-b483b61c31afc57cecb31a8a04dd18ea.jpg',
+			img: image5,
 			name: 'João',
 			isChecked: false
 		},
 		{
 			id: newId(),
-			img: 'https://this-person-does-not-exist.com/img/avatar-55f4dd7b723111eba9c1a8aeca8b7847.jpg',
+			img: image6,
 			name: 'Maria',
 			isChecked: false
 		}
