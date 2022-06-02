@@ -69,7 +69,6 @@ export default () => {
 		return drivers.map(c => <CheckinItem item={c} />)
 	}
 
-
 	return (
 		<Fragment>
 			<PreviousButton />
