@@ -1,0 +1,263 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*HEADER*/
+nav{
+    height: 90px;
+}
+
+nav a{
+    font-size: 150%;
+    margin-left: 50px;
+    
+}
+
+/*HEADER*/
+
+/*IMG FUNDO*/
+.div-img-fundo{
+    margin-top: 6px;
+    background: url('../img/fortnite-fundo.jpg');
+    background-size: cover; 
+    height: 550px;
+    display: flex;
+}
+
+@media screen and (max-width: 999px){
+
+    .div-img-fundo{
+        margin-top: 180px;
+    }
+
+}
+
+@media screen and (max-width:768px){
+    .div-img-fundo{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width:767px){
+    .div-img-fundo{
+        margin-top: 180px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .div-img-fundo{
+        margin-top: 170px;
+    }
+}
+/*FIM IMG FUNDO*/
+
+/*VIDEO*/
+.div-fundo{
+    background-color: rgba(156, 156, 156, 0.308);
+    height: 750px;
+}
+
+.div-fundo-2{
+    max-width: 1220px; 
+    height: 750px; 
+    margin: 0% auto;
+    display: flex; 
+    justify-content: center;  
+}
+
+.div-video video{
+    margin-top: 20px;
+    width: 1200px;
+}
+
+@media screen and (max-width: 1250px){
+    .div-fundo{
+        height: 600px;
+    }
+
+    .div-video video{
+        width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .div-fundo{
+        height: 500px;
+    }
+
+    .div-video video{
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .div-fundo{
+        height: 400px;
+    }
+
+    .div-video video{
+        width: 600px;
+    }
+}
+/*FIM VIDEO*/
+
+/*CARD*/
+.div-fundo-card{
+    height: 1400px;
+}
+
+.div-card{
+    margin-left: 90px;
+    margin-right: 90px;
+    height: 1400px;
+    
+}
+.card{
+    float: left;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+img{
+    height: 300px;
+}
+
+@media screen and (max-width: 1300px){
+
+    .div-fundo-card{
+        height: 2200px;
+    }
+    .div-card{
+        height: 2200px;
+        margin-left: 210px;   
+    }
+
+}
+
+@media (max-width: 1030px){
+
+    .div-fundo-card{
+        height: 2200px;
+    }
+
+    .div-card{
+        height: 2200px;
+        margin: 0% auto;
+    }
+}
+
+@media (max-width: 740px){
+
+    .div-fundo-card{
+        height: 3910px;
+        display: flex;
+        margin: 0% auto;
+    }
+
+    .div-card{
+        height: 3910px;
+        margin: 0% auto;
+    }
+}
+/*FIM CARD*/
+
+
+/*CADASTRO*/
+.fundo-comentario{
+    background-color: rgba(156, 156, 156, 0.308);
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-h1-comentario{
+    height: 70px;
+    margin: 0% auto;
+    margin-top: 40px;
+}
+
+.div-h1-comentario h1{
+    font-size: 2.10em;
+}
+
+.div-form-comentario{
+    margin: 0% auto;
+}
+
+.div-form-comentario input{
+    margin-top: 10px;
+}
+
+.div-form-comentario textarea{
+    margin-top: 10px;
+}
+
+form input{
+    height: 40px;
+    width: 300px;
+    border-radius: 7px;
+    border: 2px solid #012B4F;
+}
+
+form textarea{
+    height: 80px;
+    width: 300px;
+    border-radius: 7px;
+    border: 2px solid #012B4F;
+}
+form h3{
+    margin-top: 10px;
+}
+
+.botao-form button{
+    width: 203PX;
+    height: 47px;
+    border: 2px;
+    border-radius: 15px;
+    background-color:#012B4F;
+    color: white;
+    font-size: 1.50em;
+}
+/*FIM CADASTRO*/
+
+/* SUPORTE*/
+.fundo-suporte{
+    height: 400px;
+}
+.suporte{
+    max-width: 1220px; 
+    height: 350px; 
+    margin: 0% auto; 
+    display: flex;
+    justify-content: space-between; 
+}
+.suporte p{
+    margin-top: 10px;
+}
+.suporte-texto1{
+    margin-top: 20px;
+    color: #012B4F;
+}
+.suporte-texto2{
+    margin-top: 20px;
+    color: #012B4F;
+}
+.suporte-texto3{
+    margin-top: 20px;
+    color: #012B4F;
+}
+/* FIM SUPORTE*/
+
+/*SUPORTE*/
+@media (max-width: 750px){
+    .fundo-suporte{
+        height: 600px;
+    }
+    .suporte{
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+/*FIM FUNCIONAMENTO*/
