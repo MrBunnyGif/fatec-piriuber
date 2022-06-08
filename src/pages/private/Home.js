@@ -86,7 +86,7 @@ export default () => {
 	return (
 		<Fragment>
 			<div className="toggle">
-				<button onClick={() => handleLogout()}>Logout</button>
+				<button className='some-btn' onClick={() => handleLogout()}>Logout</button>
 
 				<i className="fa fa-bars menu-icone" aria-hidden="true" style={{ transform: "translateX(-30%)" }}></i>
 			</div>
