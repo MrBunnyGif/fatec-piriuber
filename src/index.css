@@ -281,3 +281,41 @@ nav ul li a:hover {
 .radius{
     border-radius: 1000px;
 }
+
+.interface  *{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Segoe UI';
+}
+
+.interface  #div-btn-motorista{
+    max-width: 1220px; 
+    height: 100px; 
+    margin: 0% auto;
+    margin-top: 110px;
+    display: flex; 
+    justify-content: center; 
+}
+
+.interface  #div-btn-responsavel{
+    max-width: 1220px; 
+    height: 100px; 
+    margin: 0% auto;
+    margin-top: 110px;
+    display: flex; 
+    justify-content: center;
+}
+
+.interface  #btn-motorista{
+    border-radius: 13px;
+    width: 90%;
+    background-color: #FDCA46;
+    font-size: 1.50em;
+}
+
+.interface  #btn-responsavel{
+    border-radius: 13px;
+    width: 90%;
+    background-color: #FDCA46;
+    font-size: 1.50em;
+}
