@@ -10,7 +10,7 @@ import image6 from '../../../assets/images/image6.jpeg'
 
 const CheckinItem = ({ item, checkChild }) => {
 	return (
-<div className="card c-c-c" id="card1">
+		<div className="card c-c-c" id="card1">
 			<img alt={item.name} width={50} src={item.img} />
 			<h3>{item.name}</h3>
 			<div className="card-body">
