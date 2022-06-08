@@ -1,21 +1,40 @@
-import React, { Fragment } from 'react'
+import React, { Fragment as div } from 'react'
 import PreviousButton from '../../../components/PreviousButton'
+import mail from '../../../assets/images/mail.png'
+import zap from '../../../assets/images/zap.png'
 import image from '../../../assets/images/image2.jpeg'
 
 export default () => {
 	return (
-		<Fragment>
-			<PreviousButton />
-			<h1>Parent contact</h1>
+		<div className='contato-p'>
+			{/*
 			<img width={100} src={image} />
 			<br />
-			<a href="tel:11987654321">
 				whatsapp
-			</a>
 			<br />
-			<a href="mailto:email@test.com.br">
 				email
-			</a>
-		</Fragment>
+			 */}
+
+			<PreviousButton />
+			<div id="div-img">
+				<img src={image} height="270" width="250" />
+			</div>
+			<h1 id="nome">Luisa Maria</h1>
+
+			<div id="div-wpp-msg">
+				<div id="fundo-wpp-msg">
+					<a href="tel:11987654321">
+						<div id="div-wpp">
+							<img src={zap} width="50" id="img-wpp" />
+						</div>
+					</a>
+					<a href="mailto:email@test.com.br">
+						<div id="div-msg">
+							<img src={mail} width="50" id="img-msg" />
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
 	)
 }
