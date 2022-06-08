@@ -1,16 +1,17 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment as div, useState } from 'react'
 import PreviousButton from '../../../components/PreviousButton'
 import newId from '../../../functions/newId'
 
 const CheckinItem = ({ item, deleteFunc }) => {
 	return (
-		<figure>
-			<img alt={item.name} width={50} src={item.img} />{' -- '}
-			<span>{item.name}</span>
-			<br />
-			<span>{item.endereco}</span>{' -- '}
-			<button onClick={() => deleteFunc(item.id)}>del</button>
-		</figure>
+
+		<div className="card" id="card1">
+			<h3>{item.name}</h3>
+			<div className="card-body">
+				<p className="card-text">{item.endereco}</p>
+			</div>
+			<button onClick={() => deleteFunc(item.id)} className='delete-btn'>Deletar</button>
+		</div>
 	)
 }
 
@@ -71,11 +72,21 @@ export default () => {
 	}
 
 	return (
-		<Fragment>
+		<div id="c-c">
+
+			<div id="div-header">
 			<PreviousButton />
-			<h1>Children</h1>
+				<h1>Gerenciar crianças</h1>
+				<h4>Vagas 18/20</h4>
+			</div>
+
+			<div className="div-fundo-card" id="skin">
+				<div className="div-card">
+				</div>
+			</div>
+
 			{renderChildrenList(childrenList)}
-			<button onClick={()=>addChild()}>Adicionar</button>
-		</Fragment>
+			<button className='some-btn fixed-btn' onClick={() => addChild()}>Adicionar</button>
+		</div>
 	)
 }
