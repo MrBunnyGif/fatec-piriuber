@@ -10,17 +10,20 @@ import image6 from '../../../assets/images/image6.jpeg'
 
 const CheckinItem = ({ item, checkChild }) => {
 	return (
-		<figure>
-			<img alt={item.name} width={50} src={item.img} />{' -- '}
-			<span>{item.name}</span>{' -- '}
+<div className="card c-c-c" id="card1">
+			<img alt={item.name} width={50} src={item.img} />
+			<h3>{item.name}</h3>
+			<div className="card-body">
+				<p className="card-text">{item.endereco}</p>
+			</div>
 			<input onChange={e => checkChild(item.id, e.target.checked)} name={item.name} value="checkin feito" checked={item.isChecked} type='checkbox' />
-		</figure>
+		</div>
 	)
 }
 
 const SaveButton = () => {
 	return (
-		<button onClick={() => alert('Lista salva!')}>salvar</button>
+		<button className='some-btn fixed-btn' onClick={() => alert('Lista salva!')}>salvar</button>
 	)
 }
 
@@ -90,9 +93,22 @@ export default () => {
 
 	return (
 		<Fragment>
-			<PreviousButton />
-			<h1>Checkin</h1>
-			{renderDate()}
+			<div id="div-header">
+				<PreviousButton />
+				<h1>Gerenciar crianças</h1>
+				<h4>Vagas 18/20</h4>
+			</div>
+			<div className='d-flex'>
+				<span>Listagem diária</span>
+				<span>
+					{renderDate()}
+				</span>
+			</div>
+
+			<div className="div-fundo-card" id="skin">
+				<div className="div-card">
+				</div>
+			</div>
 			{renderChildrenList(childrenList)}
 			<SaveButton />
 		</Fragment>

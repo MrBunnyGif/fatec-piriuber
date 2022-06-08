@@ -183,12 +183,18 @@ nav ul li a:hover {
     margin: 1rem;
 }
 
-#c-c .card {
+#c-c .card, .card.c-c-c  {
     width: 80%;
     padding: 1rem;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+
+.card.c-c-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .some-btn {
@@ -213,3 +219,7 @@ nav ul li a:hover {
     box-shadow: 0px 0px 16px gray;
     z-index: 123;
 }
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+  }
