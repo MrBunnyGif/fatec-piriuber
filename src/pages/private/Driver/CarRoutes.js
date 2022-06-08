@@ -1,11 +1,14 @@
 import React, { Fragment } from 'react'
 import PreviousButton from '../../../components/PreviousButton'
-
+import Map from '../../../components/Map'
 export default () => {
 	return (
 		<Fragment>
-			<PreviousButton />
-			<h1>Car routes</h1>
+			<header className='map-header'>
+				<PreviousButton />
+				<h1>Rotas indicadas</h1>
+			</header>
+			<Map />
 		</Fragment>
 	)
 }
