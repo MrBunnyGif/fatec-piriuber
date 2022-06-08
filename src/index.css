@@ -125,22 +125,16 @@
       margin-left: 3%;
   }
 
-  .div-fundo-card {
-      height: 1400px;
-      margin-left: 120px;
+  .card {
+    width: 45%;
+    margin-bottom: 1rem;
   }
 
   .div-card {
-      margin-left: 90px;
-      margin-right: 90px;
-      height: 1400px;
-
-  }
-
-  .card {
-      float: left;
-      margin-left: 70px;
-      margin-top: 20px;
+      padding-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   #card1 {
@@ -169,28 +163,20 @@
 
   #img1 {
       height: 200px;
-      width: 230px;
-      margin-left: 50px;
-      margin-top: 60px;
+      width: 100%
   }
 
   #img2 {
       height: 200px;
-      width: 230px;
-      margin-left: 50px;
-      margin-top: 60px;
+      width: 100%
   }
 
   #img3 {
       height: 200px;
-      width: 230px;
-      margin-left: 50px;
-      margin-top: 60px;
+      width: 100%
   }
 
   #img4 {
       height: 200px;
-      width: 230px;
-      margin-left: 50px;
-      margin-top: 60px;
+      width: 100%
   }
