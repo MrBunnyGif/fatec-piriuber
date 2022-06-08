@@ -7,14 +7,6 @@ import image from '../../../assets/images/image2.jpeg'
 export default () => {
 	return (
 		<div className='contato-p'>
-			{/*
-			<img width={100} src={image} />
-			<br />
-				whatsapp
-			<br />
-				email
-			 */}
-
 			<PreviousButton />
 			<div id="div-img">
 				<img src={image} height="270" width="250" />
