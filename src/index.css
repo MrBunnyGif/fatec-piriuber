@@ -132,6 +132,10 @@ nav ul li a:hover {
     margin-bottom: 1rem;
 }
 
+.card.home {
+    min-height: 200px;
+}
+
 .div-card {
     padding-top: 1rem;
     display: flex;
@@ -230,7 +234,7 @@ nav ul li a:hover {
     font-family: 'Segoe UI';
 }
 
-.contato-p .some-btn{
+.contato-p .some-btn {
     margin: 1rem 0 0 1rem;
 }
 
@@ -278,44 +282,74 @@ nav ul li a:hover {
     border-radius: 140px;
 }
 
-.radius{
+.radius {
     border-radius: 1000px;
 }
 
-.interface  *{
+.interface * {
     padding: 0%;
     margin: 0%;
     font-family: 'Segoe UI';
 }
 
-.interface  #div-btn-motorista{
-    max-width: 1220px; 
-    height: 100px; 
+.interface #div-btn-motorista {
+    max-width: 1220px;
+    height: 100px;
     margin: 0% auto;
     margin-top: 110px;
-    display: flex; 
-    justify-content: center; 
-}
-
-.interface  #div-btn-responsavel{
-    max-width: 1220px; 
-    height: 100px; 
-    margin: 0% auto;
-    margin-top: 110px;
-    display: flex; 
+    display: flex;
     justify-content: center;
 }
 
-.interface  #btn-motorista{
+.interface #div-btn-responsavel {
+    max-width: 1220px;
+    height: 100px;
+    margin: 0% auto;
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+}
+
+.interface #btn-motorista {
     border-radius: 13px;
     width: 90%;
     background-color: #FDCA46;
     font-size: 1.50em;
 }
 
-.interface  #btn-responsavel{
+.interface #btn-responsavel {
     border-radius: 13px;
     width: 90%;
     background-color: #FDCA46;
     font-size: 1.50em;
+}
+
+.form h1 {
+    height: 100px;
+    background: #FDCA46;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.form form {
+    padding: 1rem;
+    margin-top: 5rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form input {
+    width: 100%;
+    border: 1px solid rgb(253, 202, 70);
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.some-btn:disabled{
+    background-color: #FDCA46BA;
 }

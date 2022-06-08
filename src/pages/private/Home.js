@@ -13,7 +13,7 @@ import doc from '../../assets/images/doc.png'
 
 const MenuOption = ({ item }) => {
 	return (
-		<div className="card" id="card1">
+		<div className="card home" id="card1">
 			<Link to={item.link}>
 				<img src={item.icon} className="card-img-top" id="img1" />
 				<div className="card-body">

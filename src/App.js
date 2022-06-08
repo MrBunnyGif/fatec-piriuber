@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LoginType from './pages/public/Logintype'
+import Login from './pages/public/Login'
 import DriverContact from './pages/private/Parents/DriverContact'
 import DriversList from './pages/private/Parents/DriversList'
 import FindChildren from './pages/private/Parents/FindChildren'
@@ -20,6 +21,8 @@ class App extends Component {
     return (
       <Routes>
         <Route path="/" element={<LoginType />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/create" element={<LoginType />} />
 
         <Route path='/home' element={<ProtectedRoute component={<Home />} />} />
         <Route path="/find-children" element={<ProtectedRoute component={<FindChildren />} />} />

@@ -7,7 +7,7 @@ export default () => {
 
 	const logIn = type => {
 		Auth.login(type)
-		navigate('/home')
+		navigate('/login')
 	}
 
 	return (
