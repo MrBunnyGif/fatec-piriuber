@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from "react-router-dom";
 import Auth from '../../Auth';
+import PreviousButton from '../../components/PreviousButton';
 
 export default () => {
 	const navigate = useNavigate()
@@ -15,16 +16,19 @@ export default () => {
 		e.preventDefault()
 		setReq(true)
 
-		setTimeout(()=>{
+		setTimeout(() => {
 			logIn('driver')
-		},2000)
+		}, 2000)
 	}
 
 	return (
 		<div className='form'>
-			<h1>
-				Login
-			</h1>
+			<div className='h1'>
+				<PreviousButton logout />
+				<h1>
+					Login
+				</h1>
+			</div>
 			<form onSubmit={e => handleSubmit(e)}>
 				<div>
 					<label>
@@ -42,6 +46,9 @@ export default () => {
 				</div>
 				<button disabled={req} className='some-btn'>{req ? 'Entrando...' : 'Entrar'}</button>
 			</form>
+			<Link to="/create">
+				Criar conta
+			</Link>
 		</div>
 	)
 }

@@ -324,13 +324,11 @@ nav ul li a:hover {
     font-size: 1.50em;
 }
 
-.form h1 {
+.form .h1 {
     height: 100px;
     background: #FDCA46;
     padding: 1rem;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
 }
 
 .form form {
@@ -342,7 +340,7 @@ form div {
     margin-bottom: 1rem;
 }
 
-form input {
+form input:not(.w-n) {
     width: 100%;
     border: 1px solid rgb(253, 202, 70);
     padding: 4px;
@@ -350,6 +348,16 @@ form input {
     border-radius: 4px;
 }
 
-.some-btn:disabled{
+form input.w-n {
+    margin-left: 1rem;
+}
+
+.some-btn:disabled {
     background-color: #FDCA46BA;
+}
+
+.form a {
+    padding-left: 1rem;
+    color: #886d26;
+    text-decoration: none;
 }

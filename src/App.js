@@ -15,6 +15,7 @@ import {
   Route
 } from "react-router-dom";
 import ProtectedRoute from './components/ProtectedRoute';
+import NewAccount from './pages/public/NewAccount';
 
 class App extends Component {
   render() {
@@ -22,7 +23,7 @@ class App extends Component {
       <Routes>
         <Route path="/" element={<LoginType />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/create" element={<LoginType />} />
+        <Route path="/create" element={<NewAccount />} />
 
         <Route path='/home' element={<ProtectedRoute component={<Home />} />} />
         <Route path="/find-children" element={<ProtectedRoute component={<FindChildren />} />} />
