@@ -3,13 +3,19 @@ import { Link, Navigate } from "react-router-dom";
 import Auth from '../../Auth';
 import newId from '../../functions/newId';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../../assets/images/pngegg (28) 1.png'
+import pencil from '../../assets/images/pencil.png'
+import map from '../../assets/images/map.png'
+import person from '../../assets/images/person.png'
+import gadget from '../../assets/images/gadget.png'
+import driver from '../../assets/images/driver.png'
+import bus from '../../assets/images/bus.png'
+import doc from '../../assets/images/doc.png'
 
 const MenuOption = ({ item }) => {
 	return (
 		<div className="card" id="card1">
 			<Link to={item.link}>
-				<img src="pngegg (28) 1.png" className="card-img-top" id="img1" />
+				<img src={item.icon} className="card-img-top" id="img1" />
 				<div className="card-body">
 					<p className="card-text" style={{ marginLeft: "50px" }}>{item.title}</p>
 				</div>
@@ -25,44 +31,44 @@ export default () => {
 		driver: [
 			{
 				title: 'Checkin da Pirua',
-				icon: 'lapis',
+				icon: pencil,
 				link: '/checkin',
 			},
 			{
 				title: 'Rotas Indicadas',
-				icon: 'mapa',
+				icon: map,
 				link: '/car-routes',
 			},
 			{
 				title: 'Entrar em contato com Responsável',
-				icon: 'pessoa',
+				icon: person,
 				link: '/parents-contact',
 			},
 			{
 				title: 'Gerenciar Crianças',
-				icon: 'engrenagem',
+				icon: gadget,
 				link: '/manage-children',
 			},
 		],
 		parent: [
 			{
 				title: 'Localizar filho(a)',
-				icon: 'mapa',
+				icon: map,
 				link: '/find-children',
 			},
 			{
 				title: 'Entrar em contato com Perueiro',
-				icon: 'motorista',
+				icon: driver,
 				link: '/driver-contact',
 			},
 			{
 				title: 'Lista de Perueiros',
-				icon: 'perua',
+				icon: bus,
 				link: '/drivers-list',
 			},
 			{
 				title: 'Informações do contrato',
-				icon: 'lapis',
+				icon: doc,
 				link: '/parents-profile',
 			},
 		]
@@ -80,7 +86,7 @@ export default () => {
 	return (
 		<Fragment>
 			<div className="toggle">
-			<button onClick={() => handleLogout()}>Logout</button>
+				<button onClick={() => handleLogout()}>Logout</button>
 
 				<i className="fa fa-bars menu-icone" aria-hidden="true" style={{ transform: "translateX(-30%)" }}></i>
 			</div>
@@ -102,7 +108,12 @@ export default () => {
 
 			<div id="nome-cpf">
 				<h1 id="h1-nome">Marivaldo Soares</h1>
-				<h1 id="h1-cpf">CPF 111.111.111-11</h1>
+				{
+					user === 'driver' ?
+						<h1 id="h1-cpf">CPF 111.111.111-11</h1>
+						:
+						<h1 id="h1-cpf">Pai do Carlos Almeida</h1>
+				}
 			</div>
 
 			<section>
